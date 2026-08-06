@@ -2,16 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css">
-    <title>frontend</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <title>Task Hero</title>
   </head>
+
   <body>
-    <div class="todo">
-      <input type="text" placeholder="To do" id="todo-input">
-      <button class="add-button" id="add-button">Add</button>
-    </div>
+    <main class="app">
+      <div class="sparkle sparkle-one">✦</div>
+      <div class="sparkle sparkle-two">★</div>
+      <div class="sparkle sparkle-three">✧</div>
+
+      <header class="hero">
+        <div class="hero-badge">
+          DAILY QUEST
+        </div>
+
+        <h1>
+          Task
+          <span>Hero!</span>
+        </h1>
+
+        <div class="speech-bubble">
+          <p>Let’s complete today’s missions!</p>
+        </div>
+      </header>
+
+      <section class="todo-panel">
+        <div class="panel-title">
+          <span class="panel-icon">⚡</span>
+
+          <div>
+            <p class="small-title">QUEST BOARD</p>
+            <h2>My Missions</h2>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="Enter a new mission..."
+            autocomplete="off"
+          />
+
+          <button
+            type="button"
+            class="add-button"
+            id="add-button"
+            aria-label="Add task"
+          >
+            +
+          </button>
+        </div>
+
+        <div class="list-header">
+          <p id="task-counter">No missions yet</p>
+
+          <span class="status-badge">
+            ACTIVE
+          </span>
+        </div>
+
+        <ul id="todo-list"></ul>
+      </section>
+
+      <footer class="app-footer">
+        <p>Do your best, hero!</p>
+        <span>☆</span>
+      </footer>
+    </main>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
